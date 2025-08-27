@@ -23,9 +23,8 @@ import pandas as pd
 dataset_path = '/kaggle/input/skill-and-career-recommendation-dataset'
 print("Files in dataset directory:", os.listdir(dataset_path))
 
-# Assuming the main data file is an Excel file.
-# If there are multiple files, you might need to adjust the filename below.
-# Let's assume the file is named 'Dataset Project 404.xlsx' based on the output.
+# Presuming that the primary data file is an Excel file. # You may need to change the filename below if there are several files.
+# Based on the output, let's assume that the file is called 'Dataset Project 404.xlsx'.
 file_name = 'Dataset Project 404.xlsx'
 file_path = os.path.join(dataset_path, file_name)
 
@@ -33,7 +32,7 @@ try:
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
 
-    # Read the Excel file into a DataFrame
+    # Open a DataFrame and read the Excel file.
     df = pd.read_excel(file_path)
     print("\nDataFrame created successfully. First 5 rows:")
     display(df.head())
